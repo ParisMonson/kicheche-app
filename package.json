@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "start:wsl": "REACT_NATIVE_PACKAGER_HOSTNAME=$(netsh.exe interface ip show address 'Ethernet' | grep 'IP Address' | sed -r 's/^.*IP Address:\\W*//') expo start",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
